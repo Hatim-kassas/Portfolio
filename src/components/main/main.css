@@ -1,0 +1,178 @@
+/* ========================
+ table of contents
+===========================
+1. Left Section ==> Buttons
+2. Right Section ==> Card
+3- Responsive Design (media query)
+=========================== */
+
+main.flex {
+  gap: 2.6rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+/* ===============================
+ 1. Left Section ==> Buttons
+================================== */
+main section.left-section.flex {
+  flex-direction: column;
+  gap: 10px;
+}
+
+main section.left-section.flex button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 15rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+main section.left-section.flex button:hover {
+  opacity: 1;
+}
+
+main section.left-section.flex button.active {
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+  border: 1px solid var(--blue);
+}
+
+/* ===============================
+ 2. Right Section ==> Card
+================================== */
+
+main section.right-section.flex {
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  row-gap: 2.2rem;
+}
+
+.card {
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05)
+  );
+  width: 290px; /* Fixed width to match image */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevents content from spilling out */
+}
+
+.card:hover {
+  border: 1px solid var(--blue);
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+
+.card img.imgSize {
+  object-fit: cover;
+  width: 290px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.card .box {
+  padding: 1rem 0.5rem;
+  flex: 1; /* Allows the box to take remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures space is distributed */
+}
+
+.card .box .title {
+  font-size: 1.25rem;
+  color: var(--title);
+  margin-bottom: 0.5rem; /* Consistent spacing */
+}
+
+.card .box .sub-title {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1.1rem;
+  max-height: 60px; /* Limit the height of the description */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical; /* Enable multi-line truncation */
+}
+
+.card .box .icons {
+  justify-content: space-between;
+  margin-top: auto; /* Pushes icons to the bottom */
+  padding-top: 1rem; /* Optional: Adds space above icons */
+}
+
+.card .icon-github,
+.card .icon-link {
+  font-size: 1.2rem;
+  color: var(--subtitle);
+}
+
+.card .icon-github:hover,
+.card .icon-link:hover {
+  font-size: 1.25rem;
+  color: var(--icon-hover);
+  cursor: pointer;
+}
+
+.card a.link {
+  font-size: 0.9rem;
+  color: var(--blue);
+  margin-right: 10px;
+}
+
+/* =====================================
+ 3- Responsive Design (media query)
+======================================== */
+
+@media (max-width: 700px) {
+  main.flex {
+      flex-direction: column;
+      gap: 2.64rem;
+      align-items: center;
+  }
+
+  main section.left-section.flex {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  main section.left-section.flex button {
+      width: 7rem;
+      padding: 0.8rem 0;
+      font-size: 0.9rem;
+  }
+
+  .card {
+      width: 100%; /* Full width on mobile */
+      height: auto; /* Adjust height based on content on mobile */
+      max-height: 400px; /* Maximum height to avoid excessive growth */
+  }
+
+  .card img.imgSize {
+      width: 100%; /* Full width on mobile */
+      height: auto; /* Adjust height based on image aspect ratio */
+      max-height: 160px; /* Maintain maximum image height */
+  }
+
+  .card .box .icons {
+      padding-top: 0.5rem; /* Adjusted padding for mobile */
+  }
+}

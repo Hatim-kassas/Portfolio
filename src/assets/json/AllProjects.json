@@ -1,0 +1,47 @@
+[
+    {
+        "key": 1,
+        "imgPath": "public/img/ecommerce-web--image-card.png",
+        "title": "eCommerce Website",
+        "subTitle": "A sleek eCommerce website built with React, featuring a modern design and seamless user experience.",
+        "category": "React",
+        "link": "https://hatim-kassas.github.io/ReactJs-EcomWeb/",
+        "github": "https://github.com/Hatim-kassas/ReactJs-EcomWeb"
+    },
+    {
+        "key": 2,
+        "imgPath": "public/img/Flux_Dev_A_modern_sleek_and_minimalist_illustration_of_a_car_r_2.jpeg",
+        "title": "Car Rental App Project",
+        "subTitle": "A sleek car rental app built with Flutter for a seamless user experience.",
+        "category": "Flutter",
+        "link": "",
+        "github": "https://github.com/Hatim-kassas/CarRentalApp"
+    },
+    {
+        "key": 3,
+        "imgPath": "public/img/Figma-Image.jpg",
+        "title": "Figma Design App Mobile",
+        "subTitle": "A user-friendly mobile car rental app designed in Figma and built with Flutter.",
+        "category": "Figma",
+        "link": "https://www.figma.com/design/85YTLxse6bTGqtJZ8KDtJ8/SwiftCar?node-id=0-1&t=3SWVpMsliYqd3DB7-1",
+        "github": "https://github.com/Hatim-kassas/CarRentalApp"
+    },
+    {
+        "key": 4,
+        "imgPath": "public/img/Figma-Image.jpg",
+        "title": "Figma Design WebSite",
+        "subTitle": "A modern car rental website crafted in Figma for an intuitive online experience.",
+        "category": "Figma",
+        "link": "https://www.figma.com/design/TsTq47lVOR57FOaLgKCWTV/Untitled?node-id=0-1&t=EoVhR0lZInQHxosi-1",
+        "github": ""
+    },
+    {
+        "key": 5,
+        "imgPath": "public/img/portfolio-image-card.png",
+        "title": "Portfolio",
+        "subTitle": "Code source this Website portfolio",
+        "category": "React",
+        "link": "",
+        "github": ""
+    }
+]
