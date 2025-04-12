@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./main.css";
-import projectsData from "../../assets/json/AllProjects.json";
+import projectsData from "../../data/AllProjects.json";
+
 
 export default function Main() {
   const [activeBtn, setActiveBtn] = useState("All");
@@ -53,13 +54,29 @@ export default function Main() {
         >
           React & MUI
         </button>
-        <button
+        {/* <button
           onClick={() => {
             handleFilter("PHP");
           }}
           className={activeBtn === "PHP" ? "active" : null}
         >
           PHP & Laravel
+        </button> */}
+        <button
+          onClick={() => {
+            handleFilter("Python");
+          }}
+          className={activeBtn === "Python" ? "active" : null}
+        >
+          Pyhton
+        </button>
+        <button
+          onClick={() => {
+            handleFilter("Api");
+          }}
+          className={activeBtn === "Api" ? "active" : null}
+        >
+          Rest Api 
         </button>
       </section>
 
@@ -69,7 +86,7 @@ export default function Main() {
             <article key={index.key} className="card">
               <img className="imgSize" src={index.imgPath} alt="" />
 
-              <div style={{ width: "290px" }} className="box">
+              <div className="box">
                 <h1 className="title">{index.title}</h1>
                 <p className="sub-title">{index.subTitle}</p>
 

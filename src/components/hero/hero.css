@@ -77,3 +77,23 @@
       display: none;
     }
   }
+
+  @media (max-width: 700px) {
+    section.hero .avatar {
+      width: 100px;
+    }
+
+    section.hero h1.title {
+      font-size: 1.85rem;
+      line-height: 3rem;
+      margin: 22px 0;
+    }
+    section.hero p.sub-title {
+      font-size: 1.02rem;
+      line-height: 1.45rem;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+  }
+
+  

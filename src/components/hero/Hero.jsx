@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="hero flex">
       <div className="left-section">
         <div className="parent-avatar flex">
-          <img src="./imgPortfolio_y.jpg" className="avatar" alt="" />
+          <img src="/img/imgPortfolio_y.jpg" className="avatar" alt="" />
           <div className="icon-verified"></div>
         </div>
 
@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
         <p className="sub-title">
           Hi, I’m Hatim, a Full Stack Developer from Tangier, Morocco. 
-          I trained at WebForce3, earning my diploma in 2024, 
+          I got my Full Stack Developer Diploma after 2 years of studying at WebForce3 School, 
           and I’m certified in JavaScript and Responsive Web Design from FreeCodeCamp. 
           I build web and mobile solutions with a focus on UI/UX, using HTML, CSS, JavaScript, React.js, PHP, Laravel, Flutter, Firebase, Figma for design, 
           APIs for integration, and Git for version control.
@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div style={{ width: 1100 , marginLeft: "auto" }} className="right-section animation border">
+      <div style={{ width: 400 , marginLeft: "auto" }} className="right-section animation border">
         <Lottie animationData={dev} />
       </div>
     </section>

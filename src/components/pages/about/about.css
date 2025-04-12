@@ -1,0 +1,342 @@
+/* about.css */
+.about {
+    padding: 3rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content-wrapper {
+    padding: 0 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--title);
+  }
+  
+  .highlight {
+    color: var(--blue);
+    font-weight: 500;
+  }
+  
+  .sub-title {
+    color: var(--subtitle);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 800px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .stat-item {
+    background: var(--secondary);
+    color: var(--title);
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    color: var(--title);
+    margin: 2.5rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+  }
+  
+  .competencies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .competency-category {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+  }
+  
+  .competency-category h4 {
+    color: var(--blue);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .competency-category li {
+    padding: 0.4rem 0;
+    color: var(--subtitle);
+    border-bottom: 1px dashed var(--border);
+  }
+  
+  .milestones-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .milestone-card {
+    background: var(--secondary);
+    color: var(--title);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  
+  .date-badge {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    background: rgba(93, 188, 252, 0.2);
+    color: var(--blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .tech-used {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .tech-used span {
+    background: rgba(93, 188, 252, 0.1);
+    color: var(--blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .education-card {
+    background: rgba(93, 188, 252, 0.05);
+    border-left: 4px solid var(--blue);
+  }
+  
+  .education-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+  }
+  
+  .education-item {
+    padding: 0.3rem 0;
+    color: var(--subtitle);
+    font-size: 0.9rem;
+  }
+  
+  .education-item strong {
+    color: var(--title);
+    font-weight: 500;
+  }
+
+  /* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .certification-card {
+    background: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  
+  .certification-card.highlighted {
+    border-left: 4px solid var(--blue);
+    background: rgba(93, 188, 252, 0.05);
+  }
+  
+  .cert-header {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cert-meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.7rem 0;
+    font-size: 0.9rem;
+    color: var(--subtitle);
+  }
+  
+  .cert-id {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: var(--subtitle);
+    margin: 0.7rem 0;
+    word-break: break-all;
+  }
+  
+  .cert-skills {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+  
+  .cert-skills span {
+    background: rgba(93, 188, 252, 0.1);
+    color: var(--blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+  }
+  
+  .view-credential {
+    color: var(--blue);
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: 0.2s;
+  }
+  
+  .view-credential:hover {
+    text-decoration: underline;
+    transform: translateX(3px);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-wrapper {
+      padding: 0 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .competencies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .about {
+      padding: 2rem 0;
+    }
+  
+    .content-wrapper {
+      padding: 0 1rem;
+    }
+  
+    .title {
+      font-size: 1.8rem;
+      line-height: 1.3;
+    }
+  
+    .sub-title {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    .stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+  
+    .stat-item {
+      padding: 0.8rem;
+    }
+  
+    .stat-number {
+      font-size: 1.5rem;
+    }
+  
+    .stat-label {
+      font-size: 0.7rem;
+    }
+  
+    .section-title {
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+    }
+  
+    .competencies-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .competency-category {
+      padding: 1rem;
+    }
+  
+    .competency-category h4 {
+      font-size: 1rem;
+    }
+  
+    .competency-category li {
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+    }
+  
+    /* Certifications */
+    .certification-card {
+      padding: 1rem;
+    }
+  
+    .cert-header {
+      font-size: 0.8rem;
+    }
+  
+    h5 {
+      font-size: 1rem;
+    }
+  
+    .cert-meta,
+    .cert-id {
+      font-size: 0.75rem;
+    }
+  
+    .cert-skills span {
+      padding: 0.2rem 0.6rem;
+      font-size: 0.7rem;
+    }
+  
+    /* Milestones */
+    .milestone-card {
+      padding: 1rem;
+    }
+  
+    .date-badge {
+      right: 1rem;
+      top: 1rem;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+    }
+  
+    .tech-used span,
+    .education-item {
+      font-size: 0.75rem;
+    }
+  
+    .education-details {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  
+    .view-credential {
+      font-size: 0.8rem;
+    }
+  }
