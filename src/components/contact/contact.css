@@ -1,5 +1,4 @@
-/* contact.css */
-.contact-section {
+/* .contact-section {
   padding: 4rem 2rem;
   border-radius: 20px;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -157,5 +156,252 @@
 
   .contact-submit-btn {
     width: 30%;
+  }
+} */
+
+
+/* contact.css */
+.contact-section {
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f6f9fc 0%, #e6eef7 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+
+.contact-icon-envelope {
+  color: #3a7bd5;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon-envelope:hover {
+  transform: scale(1.1);
+}
+
+.contact-subtitle {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+}
+
+.contact-form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.contact-form-label {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3a7bd5;
+  outline: none;
+  box-shadow: 0 0 8px rgba(58, 123, 213, 0.3);
+  background: #fff;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  background: linear-gradient(to right, #3a7bd5, #6db2e4);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 25%;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(58, 123, 213, 0.3);
+}
+
+.contact-submit-btn:hover {
+  background: linear-gradient(to right, #2e6bc7, #5ba1d6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(58, 123, 213, 0.4);
+}
+
+.contact-submit-btn:disabled {
+  background: linear-gradient(to right, #b4b4b4, #d1d1d1);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.loading {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading:after {
+  content: "...";
+  animation: loading-dots 1.5s infinite;
+  width: 1.5em;
+  text-align: left;
+}
+
+@keyframes loading-dots {
+  0%   { content: "."; }
+  33%  { content: ".."; }
+  66%  { content: "..."; }
+}
+
+.contact-success-message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: #e6f7ed;
+  border-radius: 10px;
+  color: #2e7d32;
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.1);
+}
+
+.contact-animation-container {
+  max-width: 400px;
+  margin: auto;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-animation-container {
+    max-width: 300px;
+    margin: 0 auto 2rem;
+  }
+
+  .contact-submit-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-submit-btn {
+    width: 28%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-section {
+    padding: 1.5rem 0.8rem;
+    border-radius: 15px;
+  }
+  
+  .contact-header {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+  
+  .contact-form {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .contact-form-label {
+    font-size: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  
+  .contact-submit-btn {
+    font-size: 0.82rem;
+    padding: 0.8rem 1.2rem;
+    width: 34%;
+  }
+  
+  .contact-success-message {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-animation-container {
+    max-width: 220px;
   }
 }

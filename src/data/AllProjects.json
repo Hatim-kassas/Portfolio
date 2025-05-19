@@ -4,7 +4,7 @@
         "imgPath": "/img/ecommerce-web-image-card.png",
         "title": "eCommerce Website",
         "subTitle": "A sleek eCommerce website built with React, featuring a modern design and seamless user experience.",
-        "category": "React",
+        "category": "React & MUI",
         "link": "https://hatim-kassas.github.io/ReactJs-EcomWeb/",
         "github": "https://github.com/Hatim-kassas/ReactJs-EcomWeb"
     },
@@ -22,7 +22,7 @@
         "imgPath": "/img/figma-img-car.png",
         "title": "Figma Design App Mobile",
         "subTitle": "A user-friendly mobile car rental app designed in Figma and built with Flutter.",
-        "category": "Figma",
+        "category": "Figma Design",
         "link": "https://www.figma.com/design/85YTLxse6bTGqtJZ8KDtJ8/SwiftCar?node-id=0-1&t=3SWVpMsliYqd3DB7-1",
         "github": "https://github.com/Hatim-kassas/CarRentalApp"
     },
@@ -31,7 +31,7 @@
         "imgPath": "/img/Figma-image.jpg",
         "title": "Figma Design WebSite",
         "subTitle": "A modern car rental website crafted in Figma for an intuitive online experience.",
-        "category": "Figma",
+        "category": "Figma Design",
         "link": "https://www.figma.com/design/TsTq47lVOR57FOaLgKCWTV/Untitled?node-id=0-1&t=EoVhR0lZInQHxosi-1",
         "github": ""
     },
@@ -40,7 +40,7 @@
         "imgPath": "/img/portfolio-image-card.png",
         "title": "Portfolio",
         "subTitle": "Code source this Website portfolio",
-        "category": "React",
+        "category": "React & MUI",
         "link": "",
         "github": "https://github.com/Hatim-kassas/Portfolio"
     },
@@ -49,7 +49,7 @@
         "imgPath": "/img/tds_template.png",
         "title": "TriadDevs Solutions",
         "subTitle": "Full-stack agency website showcasing our development services.",
-        "category": "React",
+        "category": "React & MUI",
         "link": "https://triaddevs.com/",
         "github": ""
     },

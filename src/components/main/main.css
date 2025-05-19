@@ -32,6 +32,12 @@ main section.left-section.flex button {
   transition: 0.3s;
 }
 
+main section.left-section.flex button.more-btn {
+  background-color: rgba(93, 188, 252, 0.2);
+  opacity: 0.9;
+  font-weight: 500;
+}
+
 main section.left-section.flex button:hover {
   opacity: 1;
 }
@@ -107,7 +113,9 @@ main section.right-section.flex {
   text-overflow: ellipsis; /* Add ellipsis for overflow */
   display: -webkit-box;
   -webkit-line-clamp: 3; 
+  line-clamp: 3; /* Standard property for future compatibility */
   -webkit-box-orient: vertical; /* Enable multi-line truncation */
+  max-height: 4.5em; /* Fallback for browsers that don't support line-clamp */
 }
 
 .card .box .icons {
@@ -133,6 +141,16 @@ main section.right-section.flex {
   font-size: 0.9rem;
   color: var(--blue);
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.card a.link:hover {
+  color: #70c5ff;
+  transform: translateX(2px);
 }
 
 /* =====================================
@@ -158,6 +176,10 @@ main section.right-section.flex {
       padding: 0.8rem 0;
       font-size: 0.9rem;
   }
+  
+  main section.left-section.flex button.more-btn {
+      width: 7rem;
+  }
 
   .card {
       width: 100%; /* Full width on mobile */
@@ -176,3 +198,40 @@ main section.right-section.flex {
   }
 }
 
+/* Additional media query for smaller mobile screens */
+@media (max-width: 480px) {
+  main section.left-section.flex {
+      gap: 8px; /* Reduce button spacing */
+  }
+  
+  main section.left-section.flex button {
+      width: 5.5rem; /* Make buttons smaller */
+      padding: 0.6rem 0;
+      font-size: 0.8rem; /* Smaller font size */
+  }
+  
+  main section.left-section.flex button.more-btn {
+      width: 5.5rem;
+      font-size: 0.8rem;
+  }
+  
+  main section.right-section.flex {
+      row-gap: 1.8rem; /* Reduce spacing between cards */
+  }
+  
+  .card {
+      max-height: 380px; /* Slightly smaller max height */
+  }
+  
+  .card .box .title {
+      font-size: 1.15rem; /* Smaller title */
+  }
+  
+  .card .box .sub-title {
+      font-size: 0.85rem; /* Smaller subtitle */
+      margin-bottom: 0.8rem; /* Less bottom margin */
+      -webkit-line-clamp: 2; /* Show fewer lines on very small screens */
+      line-clamp: 2; /* Standard property for future compatibility */
+      max-height: 2.8em; /* Fallback for browsers that don't support line-clamp */
+  }
+}

@@ -4,12 +4,19 @@ import projectsData from "../../data/AllProjects.json";
 
 
 export default function Main() {
-  const [activeBtn, setActiveBtn] = useState("All");
+  const [activeBtn, setActiveBtn] = useState("All Projects");
   const [arr, setArr] = useState(projectsData);
+  const [showMore, setShowMore] = useState(false);
+
+  // Categories for the buttons - extract unique categories from data
+  const categories = ["All Projects", ...new Set(projectsData.map(project => project.category))];
+  
+  // Display limited categories initially, show all when "More" is clicked
+  const displayCategories = showMore ? categories : categories.slice(0, 5);
 
   const handleFilter = (event) => {
     setActiveBtn(event);
-    if(event === "All"){
+    if(event === "All Projects"){
       return setArr(projectsData);
     } else {
       const newArr = projectsData.filter((i) => {
@@ -21,93 +28,59 @@ export default function Main() {
 
   return (
     <main className="flex" id="Projects">
-      <section className="flex  left-section">
-        <button
-          onClick={() => {
-            handleFilter("All");
-          }}
-          className={activeBtn === "All" ? "active" : null}
-        >
-          all projects
-        </button>
-        <button
-          onClick={() => {
-            handleFilter("Figma");
-          }}
-          className={activeBtn === "Figma" ? "active" : null}
-        >
-          Figma Design
-        </button>
-        <button
-          onClick={() => {
-            handleFilter("Flutter");
-          }}
-          className={activeBtn === "Flutter" ? "active" : null}
-        >
-          Flutter
-        </button>
-        <button
-          onClick={() => {
-            handleFilter("React");
-          }}
-          className={activeBtn === "React" ? "active" : null}
-        >
-          React & MUI
-        </button>
-        {/* <button
-          onClick={() => {
-            handleFilter("PHP");
-          }}
-          className={activeBtn === "PHP" ? "active" : null}
-        >
-          PHP & Laravel
-        </button> */}
-        <button
-          onClick={() => {
-            handleFilter("Python");
-          }}
-          className={activeBtn === "Python" ? "active" : null}
-        >
-          Pyhton
-        </button>
-        <button
-          onClick={() => {
-            handleFilter("Api");
-          }}
-          className={activeBtn === "Api" ? "active" : null}
-        >
-          Rest Api 
-        </button>
+      <section className="flex left-section">
+        {displayCategories.map((category) => (
+          <button
+            key={category}
+            onClick={() => {
+              handleFilter(category);
+            }}
+            className={activeBtn === category ? "active" : null}
+          >
+            {category === "Api" ? "REST API" : category}
+          </button>
+        ))}
+        
+        {categories.length > 5 && (
+          <button
+            className="more-btn"
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? "Less" : "More"}
+          </button>
+        )}
       </section>
 
-      <section className=" flex right-section">
-        {arr.map((index) => {
+      <section className="flex right-section">
+        {arr.map((project) => {
           return (
-            <article key={index.key} className="card">
-              <img className="imgSize" src={index.imgPath} alt="" />
+            <article key={project.key} className="card">
+              <img className="imgSize" src={project.imgPath} alt="" />
 
               <div className="box">
-                <h1 className="title">{index.title}</h1>
-                <p className="sub-title">{index.subTitle}</p>
+                <h1 className="title">{project.title}</h1>
+                <p className="sub-title">{project.subTitle}</p>
 
                 <div className="flex icons">
                   <div style={{ gap: "11px" }} className="flex">
-                    {index.link ? (
+                    {project.link ? (
                         <a
-                          href={index.link}
+                          href={project.link}
                           className="icon-link"
                           target="_blank"
+                          rel="noopener noreferrer"
                         ></a>
                       ) : (
                         null
                       )
                     }
 
-                    {index.github ? (
+                    {project.github ? (
                       <a
-                      href={index.github}
+                      href={project.github}
                       className="icon-github"
                       target="_blank"
+                      rel="noopener noreferrer"
                     ></a>
                     ) : (
                       null
@@ -116,13 +89,20 @@ export default function Main() {
                     }
                   </div>
 
-                  <a className="link flex" href="">
-                    more
-                    <span
-                      style={{ alignSelf: "end" }}
-                      className="icon-arrow-right"
-                    ></span>
-                  </a>
+                  {(project.link || project.github) && (
+                    <a 
+                      className="link flex" 
+                      href={project.link || project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      more
+                      <span
+                        style={{ alignSelf: "end" }}
+                        className="icon-arrow-right"
+                      ></span>
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
