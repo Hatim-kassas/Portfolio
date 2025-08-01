@@ -13,14 +13,18 @@ export default function Hero() {
         </div>
 
         <h1 className="title">
-        Full Stack Developer
+        Full Stack Developer & Content Creator
         </h1>
         <p className="sub-title">
-          Hi, I’m Hatim, a Full Stack Developer from Tangier, Morocco. 
-          I got my Full Stack Developer Diploma after 2 years of studying at WebForce3 School, 
-          and I’m certified in JavaScript and Responsive Web Design from FreeCodeCamp. 
-          I build web and mobile solutions with a focus on UI/UX, using HTML, CSS, JavaScript, React.js, PHP, Laravel, Flutter, Firebase, Figma for design, 
-          APIs for integration, and Git for version control.
+          Hi, I&apos;m Hatim, a Full Stack Developer and Creative Designer from Tangier, Morocco. 
+          With over 7 years of experience since 2017, I specialize in modern interface design, 
+          professional video editing, and web/mobile app development. I earned my Full Stack 
+          Developer Diploma from WebForce3 School and I&apos;m certified in JavaScript and Responsive 
+          Web Design from FreeCodeCamp. I transform creative ideas into innovative digital solutions 
+          using HTML, CSS, JavaScript, React.js, PHP, Laravel, Flutter, Firebase, Adobe Creative Suite 
+          (After Effects, Premiere Pro, Photoshop, Illustrator), Figma for UI/UX design, APIs for 
+          integration, and Git for version control. I&apos;m passionate about creating both functional 
+          and aesthetically pleasing digital experiences.
         </p>
 
         <div className="all-icons flex">

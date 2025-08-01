@@ -138,7 +138,7 @@ main section.right-section.flex {
 }
 
 .card a.link {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--blue);
   margin-right: 10px;
   display: flex;

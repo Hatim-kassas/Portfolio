@@ -22,7 +22,7 @@
         "imgPath": "/img/figma-img-car.png",
         "title": "Figma Design App Mobile",
         "subTitle": "A user-friendly mobile car rental app designed in Figma and built with Flutter.",
-        "category": "Figma Design",
+        "category": "Figma & Motion Design",
         "link": "https://www.figma.com/design/85YTLxse6bTGqtJZ8KDtJ8/SwiftCar?node-id=0-1&t=3SWVpMsliYqd3DB7-1",
         "github": "https://github.com/Hatim-kassas/CarRentalApp"
     },
@@ -31,8 +31,17 @@
         "imgPath": "/img/Figma-image.jpg",
         "title": "Figma Design WebSite",
         "subTitle": "A modern car rental website crafted in Figma for an intuitive online experience.",
-        "category": "Figma Design",
+        "category": "Figma & Motion Design",
         "link": "https://www.figma.com/design/TsTq47lVOR57FOaLgKCWTV/Untitled?node-id=0-1&t=EoVhR0lZInQHxosi-1",
+        "github": ""
+    },
+    {
+        "key": 9,
+        "imgPath": "/img/imagEditing.png",
+        "title": "Motion & Video Editing Portfolio",
+        "subTitle": "A collection of creative video projects made with Adobe After Effects, Premiere Pro, and Photoshop.",
+        "category": "Figma & Motion Design",
+        "link": "https://drive.google.com/drive/folders/1tHy9CVUwnUft-qBqQ5tH33mgAWfS2ZkJ?usp=sharing",
         "github": ""
     },
     {
